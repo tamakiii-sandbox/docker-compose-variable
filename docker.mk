@@ -1,4 +1,4 @@
-.PHONY: install install-dev clean
+.PHONY: install install-dev development clean
 
 TARGET := production-pseudo
 
@@ -7,8 +7,11 @@ install: \
 	build
 
 install-dev: \
-	$(eval TARGET=development) \
+	development \
 	install
+
+development:
+	$(eval TARGET := development)
 
 .env:
 	touch $@
