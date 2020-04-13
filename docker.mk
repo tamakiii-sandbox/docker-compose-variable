@@ -1,4 +1,4 @@
-.PHONY: install install-dev clean
+.PHONY: install install-dev development clean
 
 TARGET := production-pseudo
 
