@@ -7,8 +7,11 @@ install: \
 	build
 
 install-dev: \
-	$(eval TARGET=development) \
+	development \
 	install
+
+development:
+	$(eval TARGET := development)
 
 .env:
 	touch $@
