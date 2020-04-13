@@ -1,4 +1,4 @@
-.PHONY: install clean
+.PHONY: install install-dev clean
 
 TARGET := production-pseudo
 
@@ -6,8 +6,9 @@ install: \
 	.env \
 	build
 
-install-dev:
-	$(MAKE) -f $(lastword $(MAKEFILE_LIST)) install TARGET=development
+install-dev: \
+	$(eval TARGET=development) \
+	install
 
 .env:
 	touch $@
