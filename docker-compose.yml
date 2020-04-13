@@ -6,6 +6,5 @@ services:
       target: ${TARGET:-production-pseudo}
     environment:
       MESSAGE: ${MESSAGE:-holla}
-    working_dir: /app
     volumes:
       - .:/app
